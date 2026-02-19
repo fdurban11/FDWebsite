@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Webpage Design</title>
+    <meta charset="UTF-8">
+    <title>Francis | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FRANCIS D.</h2>
-            </div>
 
-            <div class="menu">
-                <ul>
-                        <li><a href="/home.html">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                        <li><a href="/services.html">Services</a></li>
-                    </ul>
-                <div>
-            <div>
-        </div>
-    </div>
+    <header>
+        <h1>Francis D.</h1>
+        <p>Web Developer | Student</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </nav>
+
+    <main>
+        <section id="home" class="section active">
+            <h2>Home</h2>
+            <p>Welcome to my portfolio website.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I enjoy building websites using HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>Portfolio Website</li>
+                <li>Login System</li>
+                <li>Student Management System</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: fdurban29@gmail.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Francis D.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
