@@ -4,52 +4,137 @@
     <meta charset="UTF-8">
     <title>Francis | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Francis D.</h1>
-        <p>Web Developer | Student</p>
-    </header>
 
-    <nav>
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('about')">About</button>
-        <button onclick="showSection('projects')">Projects</button>
-        <button onclick="showSection('contact')">Contact</button>
-    </nav>
+<div class="hero-header">
+    <div class="wrapper">
+        <header>
 
-    <main>
-        <section id="home" class="section active">
-            <h2>Home</h2>
-            <p>Welcome to my portfolio website.</p>
-        </section>
+            <div class="logo">
+                <i class="fa-solid fa-f"></i>
+                <div class="logo-text">Francis D.</div>
+            </div>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>I enjoy building websites using HTML, CSS, and JavaScript.</p>
-        </section>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Portfolio Website</li>
-                <li>Login System</li>
-                <li>Student Management System</li>
-            </ul>
-        </section>
+                <ul class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: fdurban29@gmail.com</p>
-        </section>
-    </main>
+        </header>
 
-    <footer>
-        <p>© 2026 Francis D.</p>
-    </footer>
+        <div class="container">
+            <div class="hero-pic">
+                <img src="./images/DP.jpg" alt="DP">
+            </div>
 
-    <script src="script.js"></script>
+            <div class="hero-text">
+                <h5>I'm a <span class="input"></span></h5>
+                <h1>Hi, I'm Francis</h1>
+                <p>
+                    I'm a passionate software developer specializing in web development and design.
+                    I create beautiful and functional websites that provide an exceptional user experience.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#" class="btn active">View My Work</a>
+                    <a href="#" class="btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="btn"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="btn"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section id="about" class="section">
+    <div class="wrapper">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a dedicated Frontend Developer based in the Philippines.
+            I specialize in building responsive, modern, and user-friendly websites.
+            My passion is turning ideas into interactive digital experiences.
+        </p>
+    </div>
+</section>
+
+
+
+<section id="projects" class="section dark">
+    <div class="wrapper">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive portfolio built with HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>E-commerce Landing Page</h3>
+                <p>Professional landing page design for online stores.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Dashboard UI</h3>
+                <p>Interactive admin dashboard interface.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contact" class="section">
+    <div class="wrapper">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn active">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+<script>
+    var togglebtn = document.querySelector('.togglebtn');
+    var navlinks = document.querySelector('.navlinks');
+
+    togglebtn.addEventListener('click', function () {
+        this.classList.toggle('click');
+        navlinks.classList.toggle('open');
+    });
+
+    var typed = new Typed(".input", {
+        strings: ["Frontend Developer", "Web Designer", "Software Engineer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+</script>
+
 </body>
 </html>
