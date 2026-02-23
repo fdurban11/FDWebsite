@@ -1,26 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Webpage Design</title>
+    <meta charset="UTF-8">
+    <title>Francis | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">FRANCIS D.</h2>
+
+
+<div class="hero-header">
+    <div class="wrapper">
+        <header>
+
+            <div class="logo">
+                <i class="fa-solid fa-f"></i>
+                <div class="logo-text">Francis D.</div>
             </div>
 
-            <div class="menu">
-                <ul>
-                        <li><a href="/home.html">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                        <li><a href="/services.html">Services</a></li>
-                    </ul>
-                <div>
-            <div>
+            <nav>
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="container">
+            <div class="hero-pic">
+                <img src="./images/DP.jpg" alt="DP">
+            </div>
+
+            <div class="hero-text">
+                <h5>I'm a <span class="input"></span></h5>
+                <h1>Hi, I'm Francis</h1>
+                <p>
+                    I'm a passionate software developer specializing in web development and design.
+                    I create beautiful and functional websites that provide an exceptional user experience.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#" class="btn active">View My Work</a>
+                    <a href="#" class="btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="btn"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="btn"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+
+
+<section id="about" class="section">
+    <div class="wrapper">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a dedicated Frontend Developer based in the Philippines.
+            I specialize in building responsive, modern, and user-friendly websites.
+            My passion is turning ideas into interactive digital experiences.
+        </p>
+    </div>
+</section>
+
+
+
+<section id="projects" class="section dark">
+    <div class="wrapper">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive portfolio built with HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>E-commerce Landing Page</h3>
+                <p>Professional landing page design for online stores.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Dashboard UI</h3>
+                <p>Interactive admin dashboard interface.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contact" class="section">
+    <div class="wrapper">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn active">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+<script>
+    var togglebtn = document.querySelector('.togglebtn');
+    var navlinks = document.querySelector('.navlinks');
+
+    togglebtn.addEventListener('click', function () {
+        this.classList.toggle('click');
+        navlinks.classList.toggle('open');
+    });
+
+    var typed = new Typed(".input", {
+        strings: ["Frontend Developer", "Web Designer", "Software Engineer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    });
+</script>
+
 </body>
 </html>
